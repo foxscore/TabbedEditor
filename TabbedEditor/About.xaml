@@ -1,0 +1,14 @@
+﻿<Window x:Class="TabbedEditor.About"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        mc:Ignorable="d"
+        Title="About" Height="300" Width="300"
+        Closing="About_OnClosing"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Label FontSize="36" Content="World Editor"  />
+    </Grid>
+</Window>

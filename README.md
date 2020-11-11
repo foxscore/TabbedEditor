@@ -1,0 +1,1 @@
+### This tool is not meant to be used in real life scenarios, it's just a project I need to do for school.

@@ -1,0 +1,43 @@
+﻿<UserControl x:Class="TabbedEditor.WorldEditor.WorldEditorControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:tools="clr-namespace:TabbedEditor.WorldEditor.Tools"
+             mc:Ignorable="d"
+             d:DesignHeight="300" d:DesignWidth="300">
+    <DockPanel>
+        <ToolBarTray DockPanel.Dock="Top">
+            <ToolBar Name="ToolsToolbar">
+                <ToggleButton>
+                    <ToggleButton.DataContext>
+                        <tools:WorldEditorTool>LandBrush</tools:WorldEditorTool>
+                    </ToggleButton.DataContext>
+                    <Image Width="16" Height="16">
+                        <Image.Source>
+                            <DrawingImage Drawing="{StaticResource Brush}"></DrawingImage>
+                        </Image.Source>
+                    </Image>
+                </ToggleButton>
+                <ToggleButton>
+                    <ToggleButton.DataContext>
+                        <tools:WorldEditorTool>AddEnemy</tools:WorldEditorTool>
+                    </ToggleButton.DataContext>
+                    <Image Width="16" Height="16">
+                        <Image.Source>
+                            <DrawingImage Drawing="{StaticResource EnemyAdd}"></DrawingImage>
+                        </Image.Source>
+                    </Image>
+                </ToggleButton>
+            </ToolBar>
+            <ToolBar>
+                <ComboBox Name="TileTypeSelector">
+                    
+                </ComboBox>
+            </ToolBar>
+        </ToolBarTray>
+        <Grid Name="WorldGrid" DockPanel.Dock="Top">
+            
+        </Grid>
+    </DockPanel>
+</UserControl>
