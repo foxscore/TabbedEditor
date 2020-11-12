@@ -65,14 +65,36 @@ namespace TabbedEditor.TargaViewer
                 {
                     new InspectorTableEntry("Path", file.Path, file.Path),
                     new InspectorTableEntry("File Size", FileSizeFormatter.FormatSize(fileInfo.Length)),
-                    new InspectorTableEntry("Creation time", fileInfo.CreationTime.ToString(CultureInfo.InvariantCulture)), 
+                    new InspectorTableEntry("Creation time", fileInfo.CreationTime.ToString(CultureInfo.InvariantCulture)),
+                    new InspectorTableEntry("Last change", fileInfo.LastWriteTime.ToString(CultureInfo.InvariantCulture)),
                     new InspectorTableEntry("Dimensions", width + " x " + height, $"Height:\t{height}\nWidth:\t{width}"), 
+                    new InspectorTableEntry("Dimensions1", width + " x " + height, $"Height:\t{height}\nWidth:\t{width}"), 
+                    new InspectorTableEntry("Dimensions2", width + " x " + height, $"Height:\t{height}\nWidth:\t{width}"), 
+                    new InspectorTableEntry("Dimensions3", width + " x " + height, $"Height:\t{height}\nWidth:\t{width}"), 
+                    new InspectorTableEntry("Dimensions4", width + " x " + height, $"Height:\t{height}\nWidth:\t{width}"), 
+                    new InspectorTableEntry("Dimensions5", width + " x " + height, $"Height:\t{height}\nWidth:\t{width}"), 
+                    new InspectorTableEntry("Dimensions6", width + " x " + height, $"Height:\t{height}\nWidth:\t{width}"), 
+                    new InspectorTableEntry("Dimensions7", width + " x " + height, $"Height:\t{height}\nWidth:\t{width}"), 
+                    new InspectorTableEntry("Dimensions8", width + " x " + height, $"Height:\t{height}\nWidth:\t{width}"), 
+                    new InspectorTableEntry("Dimensions9", width + " x " + height, $"Height:\t{height}\nWidth:\t{width}"), 
+                    new InspectorTableEntry("Dimensions11", width + " x " + height, $"Height:\t{height}\nWidth:\t{width}"), 
+                    new InspectorTableEntry("Dimensions12", width + " x " + height, $"Height:\t{height}\nWidth:\t{width}"), 
+                    new InspectorTableEntry("Dimensions13", width + " x " + height, $"Height:\t{height}\nWidth:\t{width}"), 
+                    new InspectorTableEntry("Dimensions14", width + " x " + height, $"Height:\t{height}\nWidth:\t{width}"), 
+                    new InspectorTableEntry("Dimensions15", width + " x " + height, $"Height:\t{height}\nWidth:\t{width}"), 
+                    new InspectorTableEntry("Dimensions16", width + " x " + height, $"Height:\t{height}\nWidth:\t{width}"), 
+                    new InspectorTableEntry("Dimensions17", width + " x " + height, $"Height:\t{height}\nWidth:\t{width}"), 
+                    new InspectorTableEntry("Dimensions18", width + " x " + height, $"Height:\t{height}\nWidth:\t{width}"), 
+                    new InspectorTableEntry("Dimensions19", width + " x " + height, $"Height:\t{height}\nWidth:\t{width}"), 
+                    new InspectorTableEntry("Dimensions21", width + " x " + height, $"Height:\t{height}\nWidth:\t{width}"), 
+                    new InspectorTableEntry("Dimensions22", width + " x " + height, $"Height:\t{height}\nWidth:\t{width}"), 
+                    new InspectorTableEntry("Dimensions23", width + " x " + height, $"Height:\t{height}\nWidth:\t{width}"), 
+                    new InspectorTableEntry("Dimensions24", width + " x " + height, $"Height:\t{height}\nWidth:\t{width}"), 
                 },
                 new Image()
                 {
                     Source = new DrawingImage() { Drawing = (Drawing)FindResource("Image") }
-                }
-                );
+                });
             
             return null;
         }

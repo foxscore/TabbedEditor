@@ -70,9 +70,11 @@ namespace TabbedEditor
 
         private void TabControllerOnSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            TabItem item = e.AddedItems[0] as TabItem;
-            IEditorControl content = item.Content as IEditorControl;
-            Inspector.Set(content.InspectorContent);
+            TabItem tab = TabController.SelectedItem as TabItem;
+            if (tab is null)
+                return;
+            IEditorControl editor = tab.Content as IEditorControl;
+            Inspector.Set(editor.InspectorContent);
         }
 
         private TabItem FindTab(string path, Type type)
@@ -183,6 +185,8 @@ if (FileChecker.IsBinary(fileHistoryEntry.Path))
             {
                 FileHistory.Add(fileHistoryEntry.Path, type);
             }
+            Inspector.Set(editorControl.InspectorContent);
+            Inspector.RemoveValue("Path");
         }
 
         private void CommandBinding_Open(object sender, ExecutedRoutedEventArgs e) => Open();

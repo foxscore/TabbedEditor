@@ -15,6 +15,7 @@ namespace TabbedEditor.IO
             IsInitialized = true;
             _root = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/Fox_score/TabbedEditor/";
             Directory.CreateDirectory(_root);
+            Directory.CreateDirectory(_root + "/Traceback");
         }
 
         public static bool FileExists(string name)

@@ -11,8 +11,8 @@ namespace TabbedEditor.IO
             DateTime now = DateTime.Now;
             AppData.WriteFile(
                 // ReSharper disable once StringLiteralTypo
-                now.ToString("yyMMdd-HHmmss") + ".txt",
-                "================================\n" +
+                "Traceback/" + now.ToString("yyMMdd-HHmmss") + ".txt",
+                "=====================================\n" +
                 "=== Tabbed Editor Error Traceback ===\n" +
                 $"===    {now:dd MMM yyyy    HH:mm:ss}    ===\n" +
                 "=====================================\n" +
